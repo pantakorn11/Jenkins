@@ -17,6 +17,6 @@ Search URL
 Test Submit
 	Submit Form    tsf
 	Set Selenium Speed    ${DELAY}
-	Wait Unit Page Contains    http://www.cs.kku.ac.th
+	Wait Unit Page Contains    www.cs.kku.ac.th
 	
 Test Tear down    Close Browser
