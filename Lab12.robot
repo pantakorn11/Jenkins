@@ -15,7 +15,7 @@ Search URL
 	Input text    q    ${SEARCH}
 
 Test Submit
-	Submit Form    tsf
+	Submit Form
 	Set Selenium Speed    ${DELAY}
 	Wait Unit Page Contains    www.cs.kku.ac.th
 	
