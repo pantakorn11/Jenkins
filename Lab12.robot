@@ -1,22 +1,16 @@
-*** Settings ***
+* Settings *
 Library    SeleniumLibrary
 
-*** Variables ***
-${SEARCH}    http://www.cs.kku.ac.th
+* Variables *
+${HOMEPAGE}    http://www.google.com
+${CS}    http://www.cs.kku.ac.th
 ${BROWSER}    Chrome
-${WELCOME URL}    http://www.google.co.th
-${DELAY}    0.2
+${Submit}    btnK
 
-*** Test Cases ***
-Go to HomePage
-    Open Browser    ${WELCOME URL}    ${BROWSER}
-	
-Search URL
-	Input text    q    ${SEARCH}
-
-Test Submit
-	Submit Form
-	Set Selenium Speed    ${DELAY}
-	Wait Unit Page Contains    www.cs.kku.ac.th
-	
-Test Tear down    Close Browser
+* Test Cases *
+Go To Homepage
+    Open Browser    ${HOMEPAGE}    ${BROWSER}
+	Input Text    q    ${CS}
+	Submit form
+	Wait Until Page Contains    http://www.cs.kku.ac.th
+Test Teardown    Close Browser
